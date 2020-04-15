@@ -110,24 +110,24 @@ header {
             }
         }
     }
-}
 
-.close-btn {
-    font-size: 20px;
-    color: $price;
-    position: absolute;
-    left: 25px;
-    top: 25px;
-    display: none;
+    .close-btn {
+        font-size: 20px;
+        color: $price;
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        display: none;
 
-    #{$ltr} & {
-        left: auto;
-        right: 25px;
-    }
+        #{$ltr} & {
+            left: auto;
+            right: 25px;
+        }
 
-    @include xs {
+        @include xs {
 
-        display: flex;
+            display: flex;
 
+        }
     }
 }

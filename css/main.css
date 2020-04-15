@@ -205,7 +205,7 @@ html[dir=ltr] .search-button {
 html[dir=ltr] .search-input {
   padding: 0 19px;
   padding-right: 75px;
-  text-align: right;
+  text-align: left;
 }
 .search-input::placeholder {
   text-align: right;
@@ -485,8 +485,7 @@ html[dir=ltr] .newsletter-button:after {
     color: #86288a;
   }
 }
-
-.close-btn {
+header .close-btn {
   font-size: 20px;
   color: #979797;
   position: absolute;
@@ -494,12 +493,12 @@ html[dir=ltr] .newsletter-button:after {
   top: 25px;
   display: none;
 }
-html[dir=ltr] .close-btn {
+html[dir=ltr] header .close-btn {
   left: auto;
   right: 25px;
 }
 @media (max-width: 767px) {
-  .close-btn {
+  header .close-btn {
     display: flex;
   }
 }
@@ -1168,8 +1167,6 @@ html[dir=ltr] .lang .lang-dropdown {
   transition: all 0.5s ease-in-out;
 }
 html[dir=ltr] .order {
-  left: auto;
-  right: 40px;
   min-width: 180px;
   width: auto;
 }
