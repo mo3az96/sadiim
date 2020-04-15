@@ -40,6 +40,8 @@
     @include transition(all 0.5s ease-in-out);
 
     #{$ltr} & {
+        left: auto;
+        right: 40px;
         min-width: 180px;
         width: auto;
     }

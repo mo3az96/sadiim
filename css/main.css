@@ -1168,6 +1168,8 @@ html[dir=ltr] .lang .lang-dropdown {
   transition: all 0.5s ease-in-out;
 }
 html[dir=ltr] .order {
+  left: auto;
+  right: 40px;
   min-width: 180px;
   width: auto;
 }
