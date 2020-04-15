@@ -1,0 +1,27 @@
+.banners {
+    margin-top: 12px;
+}
+
+.head {
+    font-size: 22px;
+    color: $main;
+    font-family: med;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.thobe-sec {
+    margin-top: 75px;
+
+    @include sm {
+        margin-top: 30px;
+    }
+}
+
+.abaya-sec {
+    margin-top: 92px;
+
+    @include sm {
+        margin-top: 45px;
+    }
+}

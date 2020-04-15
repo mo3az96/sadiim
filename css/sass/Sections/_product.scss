@@ -1,0 +1,166 @@
+.product {
+    .item-img {
+        width: 100%;
+        height: 362px;
+        display: block;
+        position: relative;
+        border: 1px solid #e6e6e6;
+        overflow: hidden;
+        @include transition(all 0.3s ease-in-out);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(all 0.3s ease-in-out);
+        }
+
+        &:hover {
+            border-color: $main;
+
+            &::before {
+                opacity: 0.3;
+                visibility: visible;
+            }
+
+            .add-to {
+                transform: translateY(-50%) translateX(-50%);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .add-to {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-200%) translateX(-50%);
+        width: 170px;
+        height: 38px;
+        border-radius: 19px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 19px;
+        color: #fff;
+        font-family: med;
+        background-size: 200%;
+        @include transition(all 0.5s ease-in-out);
+        opacity: 0;
+        visibility: hidden;
+
+        span {
+            margin: 0 3.5px;
+        }
+
+        .text {
+            font-size: 16px;
+        }
+
+        &:hover {
+            background-position: 100%;
+        }
+    }
+
+    .item-info {
+        @include xs {
+            text-align: center;
+        }
+    }
+
+    .pro-name {
+        font-size: 15px;
+        @include transition(all 0.3s ease-in-out);
+        display: block;
+        width: max-content;
+        max-width: 100%;
+        color: $main;
+        margin-top: 20px;
+        margin-bottom: 6px;
+
+        @include xs {
+            margin: 15px auto 5px;
+        }
+    }
+
+    .mo-price {
+        font-size: 20px;
+        font-family: bold;
+    }
+
+    .mo-old-price {
+        font-size: 16px;
+        font-family: med;
+        text-decoration: line-through;
+        margin: 0 6px;
+        color: $price;
+    }
+}
+
+.man-product {
+    .item-img {
+        &::before {
+            background-image: -moz-linear-gradient(0deg, $man 0%, $main 100%);
+            background-image: -webkit-linear-gradient(0deg, $man 0%, $main 100%);
+            background-image: -ms-linear-gradient(0deg, $man 0%, $main 100%);
+        }
+    }
+
+    .add-to {
+        background-image: -webkit-gradient(linear, left top, right top, from($man), color-stop($main), color-stop($main), to($man));
+        background-image: -o-linear-gradient(left, $man, $main, $main, $man);
+        background-image: linear-gradient(to right, $man, $main, $main, $man);
+    }
+
+    .pro-name {
+        &:hover {
+            color: $man;
+        }
+    }
+
+    .mo-price {
+        color: $man;
+    }
+}
+
+
+.woman-product {
+    .item-img {
+        &::before {
+            background-image: -moz-linear-gradient(0deg, $woman 0%, $main 100%);
+            background-image: -webkit-linear-gradient(0deg, $woman 0%, $main 100%);
+            background-image: -ms-linear-gradient(0deg, $woman 0%, $main 100%);
+        }
+    }
+
+    .add-to {
+        background-image: -webkit-gradient(linear, left top, right top, from($woman), color-stop($main), color-stop($main), to($woman));
+        background-image: -o-linear-gradient(left, $woman, $main, $main, $woman);
+        background-image: linear-gradient(to right, $woman, $main, $main, $woman);
+    }
+
+    .pro-name {
+        &:hover {
+            color: $woman;
+        }
+    }
+
+    .mo-price {
+        color: $woman;
+    }
+}

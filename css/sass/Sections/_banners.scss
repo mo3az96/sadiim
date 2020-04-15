@@ -1,0 +1,72 @@
+.banner {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 1px solid #e6e6e6;
+    @include transition(all 0.3s ease-in-out);
+
+    img {
+        width: 100%;
+        backface-visibility: hidden;
+        @include transition(all 0.3s ease-in-out);
+
+    }
+
+    &:hover {
+        border-color: $main;
+
+        img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.order {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 180px;
+    height: 45px;
+    color: #fff;
+    font-size: 18px;
+    font-family: med;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    justify-content: space-between;
+    border-radius: 23px;
+    background-size: 200%;
+    @include transition(all 0.5s ease-in-out);
+
+    #{$ltr} & {
+        min-width: 180px;
+        width: auto;
+    }
+
+    &:after {
+        content: "\e879";
+        font-family: 'Linearicons-Free';
+
+        #{$ltr} & {
+            content: "\e87a";
+            margin-left: 7px;
+        }
+    }
+
+    &.man-order {
+        background-image: -webkit-gradient(linear, left top, right top, from($man), color-stop($main), color-stop($main), to($man));
+        background-image: -o-linear-gradient(left, $man, $main, $main, $man);
+        background-image: linear-gradient(to right, $man, $main, $main, $man);
+    }
+
+    &.woman-order {
+        background-image: -webkit-gradient(linear, left top, right top, from($woman), color-stop($main), color-stop($main), to($woman));
+        background-image: -o-linear-gradient(left, $woman, $main, $main, $woman);
+        background-image: linear-gradient(to right, $woman, $main, $main, $woman);
+    }
+
+    &:hover {
+        background-position: 100%;
+    }
+}
