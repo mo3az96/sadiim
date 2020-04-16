@@ -1836,7 +1836,7 @@ html[dir=ltr] .order:after {
 }
 @media (max-width: 767px) {
   .features-cont {
-    margin-top: 70px;
+    margin-top: 40px;
   }
 }
 
