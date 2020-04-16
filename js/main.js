@@ -156,12 +156,15 @@ $(document).ready(function () {
     });
 
     $('input.level-sub').change(function () {
-        if ($("input.level-sub:checked").val() == "sub") {
-            $(this).parents(".collapse").find(".addition").fadeIn(300)
-            alert(4444)
+        var x = $(this).attr("data-show");
+
+        if (x) {
+            $(x).fadeIn(300)
         } else {
-            $(this).parents(".collapse").find(".addition").fadeOut(300)
-            alert(3333)
+            $(this).parents(".collapse").find(".addition").fadeOut(300);
+
+            $(this).parents(".collapse").find(".addition").find("input").removeAttr("checked")
+
         }
     });
 
