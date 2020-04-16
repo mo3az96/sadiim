@@ -144,4 +144,23 @@ $(document).ready(function () {
         $(".mo-accordion").not(this).siblings().css('max-height', '0');
         $(".mo-accordion").not(this).siblings().css('padding-top', "0");
     })
+    ////////////////////step5////////////////////
+    $('.collapse.in').siblings('div').addClass('active');
+
+    $('.collapse').on('show.bs.collapse', function () {
+        $(this).siblings('div').addClass('active');
+    });
+
+    $('.collapse').on('hide.bs.collapse', function () {
+        $(this).siblings('div').removeClass('active');
+    });
+
+    $('input:radio.level-sub').change(function () {
+        if ($("input.level-sub:checked").val() == "sub") {
+            $(this).parents(".collapse").find(".addition").fadeIn(300)
+        } else {
+            $(this).parents(".collapse").find(".addition").fadeOut(300)
+        }
+    });
+
 });

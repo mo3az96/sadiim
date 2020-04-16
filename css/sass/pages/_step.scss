@@ -3,7 +3,7 @@
 }
 
 .step-head {
-    font-size: 19px;
+    font-size: 20px;
     color: $main;
     font-family: bold;
     text-align: center;
@@ -11,6 +11,10 @@
 
 .step1 {
     margin-top: 47px;
+
+    @include xs {
+        margin-top: 30px;
+    }
 }
 
 .tailor {
@@ -21,6 +25,10 @@
     position: relative;
     margin-top: 33px;
     @include transition(all 0.3s ease-in-out);
+
+    @include xs {
+        margin-top: 20px;
+    }
 
     &:hover {
         img {
@@ -43,11 +51,268 @@
     }
 }
 
+
+.step5 {
+    margin-top: 25px;
+
+    .step-head {
+        text-align: unset;
+        margin-bottom: 25px;
+
+        @include xs {
+            text-align: center;
+        }
+    }
+}
+
+.acc {
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+
+    div {
+        &.active {
+            .acc-head {
+                &::after {
+                    content: "\f068";
+                }
+            }
+        }
+    }
+}
+
+.acc-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background-color: $main;
+    padding: 0 30px;
+    border-radius: 25px 25px 0px 0px;
+
+    .acc-title {
+        font-size: 16px;
+        color: #fff;
+        font-family: bold;
+
+        &::before {
+            content: "\f0d9";
+            font-size: 14px;
+            margin-left: 10px;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+
+            #{$ltr} & {
+                content: "\f0da";
+                margin-left: 0;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &::after {
+        content: "\f067";
+        font-size: 14px;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #fff;
+    }
+}
+
+.acc-body {
+    padding: 27px 0;
+}
+
+.body-head {
+    font-size: 18px;
+    color: $main;
+    font-family: bold;
+    text-align: center;
+}
+
+.radios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+.custom-check {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: unset;
+    margin: 0 13px;
+    text-align: center;
+
+    @include xs {
+        margin: 10px 10px;
+    }
+
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked {
+            ~.checkmark {
+                &:after {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .text {
+        font-size: 15px;
+        color: $main;
+        @include transition(all 0.3s ease-in-out);
+    }
+
+    .checkmark {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f5f5f5;
+        height: 154px;
+        width: 154px;
+        border-radius: 50%;
+        position: relative;
+        margin-bottom: 15px;
+        @include transition(all 0.3s ease-in-out);
+
+        @include xs {
+            height: 120px;
+            width: 120px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &:after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f00c";
+            font-size: 30px;
+            color: transparent;
+            border-radius: 50%;
+            @include transition(all 0.3s ease-in-out);
+        }
+    }
+}
+
+.addition {
+    display: none;
+    margin-top: 45px;
+}
+
+
+
+
+.step-foot {
+    width: 470px;
+    margin: 25px auto;
+    text-align: center;
+
+    @include xs {
+        width: 100%;
+    }
+
+    #{$ltr} & {
+        width: 650px;
+
+        @include xs {
+            width: 100%;
+        }
+    }
+}
+
+.save {
+    width: 208px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    font-family: bold;
+    border-radius: 25px;
+    margin: auto;
+    background-size: 200%;
+    @include transition(all 0.5s ease-in-out);
+
+    &:hover {
+        color: #fff;
+        background-position: 100%;
+    }
+}
+
+.hint-text {
+    font-size: 16px;
+    color: $main;
+    font-family: med;
+    text-decoration: underline;
+    line-height: 1.875;
+    margin-top: 30px;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+
 .thobe-step {
     .tailor {
         &:hover {
             border-color: $man;
         }
+    }
+
+    .custom-check {
+        input {
+            &:checked {
+                ~.checkmark {
+                    &:after {
+                        background-color: rgba($man, 0.9);
+                    }
+                }
+
+                ~.text {
+                    color: $man;
+                }
+            }
+
+            &:hover {
+                ~.text {
+                    color: $man;
+                }
+            }
+        }
+    }
+
+    .save {
+        background-image: -webkit-gradient(linear, left top, right top, from($man), color-stop($main), color-stop($main), to($man));
+        background-image: -o-linear-gradient(left, $man, $main, $main, $man);
+        background-image: linear-gradient(to right, $man, $main, $main, $man);
     }
 }
 
@@ -56,5 +321,33 @@
         &:hover {
             border-color: $woman;
         }
+    }
+
+    .custom-check {
+        input {
+            &:checked {
+                ~.checkmark {
+                    &:after {
+                        background-color: rgba($woman, 0.9);
+                    }
+                }
+
+                ~.text {
+                    color: $woman;
+                }
+            }
+
+            &:hover {
+                ~.text {
+                    color: $woman;
+                }
+            }
+        }
+    }
+
+    .save {
+        background-image: -webkit-gradient(linear, left top, right top, from($woman), color-stop($main), color-stop($main), to($woman));
+        background-image: -o-linear-gradient(left, $woman, $main, $main, $woman);
+        background-image: linear-gradient(to right, $woman, $main, $main, $woman);
     }
 }
