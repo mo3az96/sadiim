@@ -155,11 +155,13 @@ $(document).ready(function () {
         $(this).siblings('div').removeClass('active');
     });
 
-    $('input:radio.level-sub').change(function () {
+    $('input.level-sub').change(function () {
         if ($("input.level-sub:checked").val() == "sub") {
             $(this).parents(".collapse").find(".addition").fadeIn(300)
+            alert(4444)
         } else {
             $(this).parents(".collapse").find(".addition").fadeOut(300)
+            alert(3333)
         }
     });
 

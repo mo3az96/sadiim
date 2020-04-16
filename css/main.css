@@ -1433,6 +1433,160 @@ html[dir=ltr] .step-foot {
   background-image: linear-gradient(to right, #86288a, #2b3581, #2b3581, #86288a);
 }
 
+.custom-hint {
+  display: block;
+  position: relative;
+  padding-right: 26px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: unset;
+}
+html[dir=ltr] .custom-hint {
+  padding-left: 26px;
+  padding-right: 0;
+}
+.custom-hint .text {
+  font-size: 18px;
+  font-family: med;
+  color: #c42e38;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.custom-hint input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.custom-hint input:checked ~ .checkmark:after {
+  color: #c42e38;
+}
+.custom-hint .checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #f5f7f7;
+  border: 1px solid #e5e5e5;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+html[dir=ltr] .custom-hint .checkmark {
+  right: auto;
+  left: 0;
+}
+.custom-hint .checkmark:after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  font-size: 9px;
+  color: transparent;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.form {
+  margin-top: 24px;
+}
+
+.input-label {
+  font-size: 15px;
+  color: #2b3581;
+  padding: 0 20px;
+  margin-bottom: 7px;
+  display: flex;
+}
+.input-label.req:after {
+  content: "*";
+  color: #ff0000;
+}
+
+.input {
+  width: calc(100% - 29px);
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #e5e5e5;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 0 20px;
+  color: #2b3581;
+  margin-bottom: 25px;
+  -moz-appearance: textfield;
+}
+.input::-webkit-outer-spin-button, .input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+@media (max-width: 992px) {
+  .input {
+    width: 100%;
+  }
+}
+.input.textarea {
+  height: 95px;
+  resize: none;
+  padding: 15px 20px;
+}
+
+.thobe-step .tailor:hover {
+  border-color: #29a8e0;
+}
+.thobe-step .custom-check input:checked ~ .checkmark:after {
+  background-color: rgba(41, 168, 224, 0.9);
+}
+.thobe-step .custom-check input:checked ~ .text {
+  color: #29a8e0;
+}
+.thobe-step .custom-check input:hover ~ .text {
+  color: #29a8e0;
+}
+.thobe-step .save {
+  background-image: -webkit-gradient(linear, left top, right top, from(#29a8e0), color-stop(#2b3581), color-stop(#2b3581), to(#29a8e0));
+  background-image: -o-linear-gradient(left, #29a8e0, #2b3581, #2b3581, #29a8e0);
+  background-image: linear-gradient(to right, #29a8e0, #2b3581, #2b3581, #29a8e0);
+}
+.thobe-step .input:focus {
+  border-color: #29a8e0;
+}
+
+.abaya-step .tailor:hover {
+  border-color: #86288a;
+}
+.abaya-step .custom-check input:checked ~ .checkmark:after {
+  background-color: rgba(134, 40, 138, 0.9);
+}
+.abaya-step .custom-check input:checked ~ .text {
+  color: #86288a;
+}
+.abaya-step .custom-check input:hover ~ .text {
+  color: #86288a;
+}
+.abaya-step .save {
+  background-image: -webkit-gradient(linear, left top, right top, from(#86288a), color-stop(#2b3581), color-stop(#2b3581), to(#86288a));
+  background-image: -o-linear-gradient(left, #86288a, #2b3581, #2b3581, #86288a);
+  background-image: linear-gradient(to right, #86288a, #2b3581, #2b3581, #86288a);
+}
+.abaya-step .input:focus {
+  border-color: #86288a;
+}
+
 .brand {
   width: 135px;
   height: 135px;

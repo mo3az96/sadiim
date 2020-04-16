@@ -351,3 +351,208 @@
         background-image: linear-gradient(to right, $woman, $main, $main, $woman);
     }
 }
+
+
+.custom-hint {
+    display: block;
+    position: relative;
+    padding-right: 26px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: unset;
+
+    #{$ltr} & {
+        padding-left: 26px;
+        padding-right: 0;
+    }
+
+
+
+    .text {
+        font-size: 18px;
+        font-family: med;
+        color: #c42e38;
+        @include transition(all 0.3s ease-in-out);
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked {
+            ~.checkmark {
+
+                &:after {
+                    color: #c42e38;
+                }
+            }
+        }
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        height: 15px;
+        width: 15px;
+        background-color: #f5f7f7;
+        border: 1px solid #e5e5e5;
+        @include transition(all 0.3s ease-in-out);
+
+        #{$ltr} & {
+            right: auto;
+            left: 0;
+        }
+
+        &:after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f00c";
+            font-size: 9px;
+            color: transparent;
+            @include transition(all 0.3s ease-in-out);
+        }
+    }
+}
+
+.form {
+    margin-top: 24px;
+}
+
+.input-label {
+    font-size: 15px;
+    color: $main;
+    padding: 0 20px;
+    margin-bottom: 7px;
+    display: flex;
+
+    &.req {
+        &:after {
+            content: "*";
+            color: #ff0000;
+        }
+    }
+}
+
+.input {
+    width: calc(100% - 29px);
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #e5e5e5;
+    @include transition(all 0.3s ease-in-out);
+    padding: 0 20px;
+    color: $main;
+    margin-bottom: 25px;
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    @include sm {
+        width: 100%;
+    }
+
+    &.textarea {
+        height: 95px;
+        resize: none;
+        padding: 15px 20px;
+    }
+}
+
+
+.thobe-step {
+    .tailor {
+        &:hover {
+            border-color: $man;
+        }
+    }
+
+    .custom-check {
+        input {
+            &:checked {
+                ~.checkmark {
+                    &:after {
+                        background-color: rgba($man, 0.9);
+                    }
+                }
+
+                ~.text {
+                    color: $man;
+                }
+            }
+
+            &:hover {
+                ~.text {
+                    color: $man;
+                }
+            }
+        }
+    }
+
+    .save {
+        background-image: -webkit-gradient(linear, left top, right top, from($man), color-stop($main), color-stop($main), to($man));
+        background-image: -o-linear-gradient(left, $man, $main, $main, $man);
+        background-image: linear-gradient(to right, $man, $main, $main, $man);
+    }
+
+    .input {
+        &:focus {
+            border-color: $man;
+        }
+    }
+}
+
+.abaya-step {
+    .tailor {
+        &:hover {
+            border-color: $woman;
+        }
+    }
+
+    .custom-check {
+        input {
+            &:checked {
+                ~.checkmark {
+                    &:after {
+                        background-color: rgba($woman, 0.9);
+                    }
+                }
+
+                ~.text {
+                    color: $woman;
+                }
+            }
+
+            &:hover {
+                ~.text {
+                    color: $woman;
+                }
+            }
+        }
+    }
+
+    .save {
+        background-image: -webkit-gradient(linear, left top, right top, from($woman), color-stop($main), color-stop($main), to($woman));
+        background-image: -o-linear-gradient(left, $woman, $main, $main, $woman);
+        background-image: linear-gradient(to right, $woman, $main, $main, $woman);
+    }
+
+    .input {
+        &:focus {
+            border-color: $woman;
+        }
+    }
+}
