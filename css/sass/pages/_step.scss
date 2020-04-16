@@ -1,0 +1,60 @@
+.page-content {
+    margin-top: 21px;
+}
+
+.step-head {
+    font-size: 19px;
+    color: $main;
+    font-family: bold;
+    text-align: center;
+}
+
+.step1 {
+    margin-top: 47px;
+}
+
+.tailor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #f2f2f2;
+    position: relative;
+    margin-top: 33px;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        img {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+    }
+
+    &::before {
+        content: "";
+        padding-bottom: 100%;
+    }
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        backface-visibility: hidden;
+        @include transition(all 0.3s ease-in-out);
+    }
+}
+
+.thobe-step {
+    .tailor {
+        &:hover {
+            border-color: $man;
+        }
+    }
+}
+
+.abaya-step {
+    .tailor {
+        &:hover {
+            border-color: $woman;
+        }
+    }
+}
