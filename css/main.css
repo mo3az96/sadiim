@@ -582,8 +582,8 @@ html[dir=ltr] header .close-btn {
   right: 20px;
 }
 .main-slider .owl-nav button[class^=owl-]:hover {
-  color: #fff;
-  background-color: #2b3581;
+  color: #2b3581;
+  background-color: #fff;
 }
 
 .brands-slider {
@@ -690,13 +690,9 @@ html[dir=ltr] header .close-btn {
   transition: all 0.3s ease-in-out;
 }
 .Product-slider .owl-dots .owl-dot.active {
-  background: #29a8e0;
   width: 10px;
   height: 10px;
   pointer-events: none;
-}
-.Product-slider .owl-dots .owl-dot:hover {
-  background: #29a8e0;
 }
 .Product-slider .owl-nav {
   width: 0;
@@ -727,6 +723,20 @@ html[dir=ltr] header .close-btn {
 }
 .Product-slider .owl-nav button[class^=owl-]:hover {
   color: #2b3581;
+}
+
+.thobe-sec .Product-slider .owl-dots .owl-dot.active {
+  background: #29a8e0;
+}
+.thobe-sec .Product-slider .owl-dots .owl-dot:hover {
+  background: #29a8e0;
+}
+
+.abaya-sec .Product-slider .owl-dots .owl-dot.active {
+  background: #86288a;
+}
+.abaya-sec .Product-slider .owl-dots .owl-dot:hover {
+  background: #86288a;
 }
 
 @media (max-width: 767px) {
@@ -812,11 +822,11 @@ html[dir=ltr] header .close-btn {
 }
 
 .rotating {
-  -webkit-animation: rotating 10s linear infinite;
-  -moz-animation: rotating 10s linear infinite;
-  -ms-animation: rotating 10s linear infinite;
-  -o-animation: rotating 10s linear infinite;
-  animation: rotating 10s linear infinite;
+  -webkit-animation: rotating 5s linear infinite;
+  -moz-animation: rotating 5s linear infinite;
+  -ms-animation: rotating 5s linear infinite;
+  -o-animation: rotating 5s linear infinite;
+  animation: rotating 5s linear infinite;
   width: 200px;
 }
 @media (max-width: 767px) {
@@ -1114,7 +1124,7 @@ html[dir=ltr] .lang .lang-dropdown {
 }
 @media (max-width: 992px) {
   .thobe-sec {
-    margin-top: 30px;
+    margin-top: 55px;
   }
 }
 
@@ -1123,7 +1133,7 @@ html[dir=ltr] .lang .lang-dropdown {
 }
 @media (max-width: 992px) {
   .abaya-sec {
-    margin-top: 45px;
+    margin-top: 65px;
   }
 }
 
@@ -1629,17 +1639,11 @@ html[dir=ltr] .custom-hint .checkmark {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.banner:hover {
-  border-color: #2b3581;
-}
-.banner:hover img {
-  transform: scale(1.1);
-}
 
 .order {
   position: absolute;
-  bottom: 40px;
-  left: 40px;
+  bottom: 55px;
+  left: 50px;
   width: 180px;
   height: 45px;
   color: #fff;
@@ -1659,6 +1663,23 @@ html[dir=ltr] .custom-hint .checkmark {
 html[dir=ltr] .order {
   min-width: 180px;
   width: auto;
+}
+@media (max-width: 767px) {
+  .order {
+    width: 150px;
+    height: 35px;
+    padding: 0;
+    bottom: 30px;
+    left: 25px;
+    justify-content: center;
+  }
+  .order::after {
+    margin-right: 7px;
+  }
+  html[dir=ltr] .order::after {
+    margin-left: 7px;
+    margin-right: 0;
+  }
 }
 .order:after {
   content: "";
@@ -1715,9 +1736,6 @@ html[dir=ltr] .order:after {
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
-.product .item-img:hover {
-  border-color: #2b3581;
 }
 .product .item-img:hover::before {
   opacity: 0.3;
@@ -1836,7 +1854,7 @@ html[dir=ltr] .order:after {
 }
 @media (max-width: 767px) {
   .features-cont {
-    margin-top: 40px;
+    margin-top: 60px;
   }
 }
 
@@ -1879,7 +1897,7 @@ footer {
 }
 @media (max-width: 767px) {
   footer {
-    margin-top: 55px;
+    margin-top: 40px;
   }
 }
 
@@ -1942,7 +1960,7 @@ html[dir=ltr] .nav-foot-link:hover, html[dir=ltr] .nav-foot-link:focus {
 
 @media (max-width: 992px) {
   .news-letter {
-    margin: 30px 0;
+    margin: 35px 0;
   }
 }
 

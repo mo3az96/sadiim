@@ -75,8 +75,8 @@
             }
 
             &:hover {
-                color: #fff;
-                background-color: $main;
+                color: $main;
+                background-color: #fff;
             }
         }
     }
@@ -182,14 +182,9 @@
             @include transition(all 0.3s ease-in-out);
 
             &.active {
-                background: $man;
                 width: 10px;
                 height: 10px;
                 pointer-events: none;
-            }
-
-            &:hover {
-                background: $man;
             }
         }
     }
@@ -221,6 +216,38 @@
 
             &:hover {
                 color: $main;
+            }
+        }
+    }
+}
+
+.thobe-sec {
+    .Product-slider {
+        .owl-dots {
+            .owl-dot {
+                &.active {
+                    background: $man;
+                }
+
+                &:hover {
+                    background: $man;
+                }
+            }
+        }
+    }
+}
+
+.abaya-sec {
+    .Product-slider {
+        .owl-dots {
+            .owl-dot {
+                &.active {
+                    background: $woman;
+                }
+
+                &:hover {
+                    background: $woman;
+                }
             }
         }
     }

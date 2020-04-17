@@ -47,11 +47,11 @@
 }
 
 .rotating {
-    -webkit-animation: rotating 10s linear infinite;
-    -moz-animation: rotating 10s linear infinite;
-    -ms-animation: rotating 10s linear infinite;
-    -o-animation: rotating 10s linear infinite;
-    animation: rotating 10s linear infinite;
+    -webkit-animation: rotating 5s linear infinite;
+    -moz-animation: rotating 5s linear infinite;
+    -ms-animation: rotating 5s linear infinite;
+    -o-animation: rotating 5s linear infinite;
+    animation: rotating 5s linear infinite;
     width: 200px;
 
     @include xs {

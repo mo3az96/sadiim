@@ -12,20 +12,12 @@
         @include transition(all 0.3s ease-in-out);
 
     }
-
-    &:hover {
-        border-color: $main;
-
-        img {
-            transform: scale(1.1);
-        }
-    }
 }
 
 .order {
     position: absolute;
-    bottom: 40px;
-    left: 40px;
+    bottom: 55px;
+    left: 50px;
     width: 180px;
     height: 45px;
     color: #fff;
@@ -42,6 +34,24 @@
     #{$ltr} & {
         min-width: 180px;
         width: auto;
+    }
+
+    @include xs {
+        width: 150px;
+        height: 35px;
+        padding: 0;
+        bottom: 30px;
+        left: 25px;
+        justify-content: center;
+
+        &::after {
+            margin-right: 7px;
+
+            #{$ltr} & {
+                margin-left: 7px;
+                margin-right: 0;
+            }
+        }
     }
 
     &:after {
